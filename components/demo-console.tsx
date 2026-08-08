@@ -45,40 +45,15 @@ export function DemoConsole({ chain, tokenAddress, contractAddress }: { chain: s
     setDecision("checking");
     setMessage("Checking identity status, transfer eligibility, and the financing-pool policy…");
     try {
-      const apassResponse = await fetch("/api/cleanverse/apass/query", {
+      const response = await fetch("/api/cleanverse/preflight", {
         method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ address: wallet, chain }),
       });
-      const apass = await apassResponse.json();
-      if (!apassResponse.ok) throw new Error(apass.error ?? "The identity check could not be completed.");
-
-      let transferAllowed = true;
-      if (tokenAddress) {
-        const response = await fetch("/api/cleanverse/apass/verify", {
-          method: "POST", headers: { "content-type": "application/json" },
-          body: JSON.stringify({ address: wallet, chain, atoken: tokenAddress }),
-        });
-        const result = await response.json();
-        if (!response.ok) throw new Error(result.error ?? "The transfer check could not be completed.");
-        transferAllowed = result.data?.code === 4;
-      }
-
-      let poolAllowed = true;
-      if (contractAddress) {
-        const response = await fetch("/api/cleanverse/validator/verify", {
-          method: "POST", headers: { "content-type": "application/json" },
-          body: JSON.stringify({ userAddress: wallet, contractAddress, chain }),
-        });
-        const result = await response.json();
-        if (!response.ok) throw new Error(result.error ?? "The pool check could not be completed.");
-        poolAllowed = result.data?.valid === true;
-      }
-
-      const active = apass.data?.status === 1;
-      const approved = active && transferAllowed && poolAllowed;
-      setDecision(approved ? "approved" : "blocked");
-      setMessage(approved
-        ? `Approved. A-Pass is active at tier ${apass.data?.tier ?? "—"}; CVA and pool policy checks passed.`
-        : `Blocked before financing. Identity: ${active ? "active" : "inactive"}; CVA: ${transferAllowed ? "pass" : "fail"}; pool: ${poolAllowed ? "pass" : "fail"}.`);
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error ?? "The compliance preflight could not be completed.");
+      setDecision(result.approved ? "approved" : "blocked");
+      setMessage(result.approved
+        ? `Approved. A-Pass tier ${result.credential?.tier ?? "—"}; every configured policy layer passed.`
+        : `Blocked before financing: ${result.reasons?.join("; ") || "policy requirements were not met"}.`);
     } catch (error) {
       setDecision("blocked");
       setMessage(error instanceof Error ? error.message : "The sandbox preflight could not be completed.");

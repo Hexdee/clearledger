@@ -6,6 +6,7 @@ const configSchema = z.object({
   CLEANVERSE_API_KEY: z.string().min(1),
   CLEANVERSE_CHAIN: z.string().default("monad"),
   CLEANVERSE_ATOKEN_ADDRESS: z.string().optional(),
+  CLEAREDGER_CONTRACT_ADDRESS: z.string().optional(),
 });
 
 export type CleanverseConfig = z.infer<typeof configSchema>;
