@@ -28,4 +28,6 @@ The prototype includes a tested Solidity lifecycle contract, server-only encrypt
 
 **Repository:** https://github.com/Hexdee/clearledger
 
+**Invoice contract:** `0xd086dAB59F3d183b77c14E6FbbacC421adCD1634`
+
 The architecture generalizes from one invoice to portfolios, jurisdiction-specific policies, risk tiers, multiple funders, secondary transfers, and institutional fiat gateways without changing the identity and settlement trust layer.

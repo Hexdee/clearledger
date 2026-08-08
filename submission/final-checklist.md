@@ -6,7 +6,7 @@
 - [x] A-Pass issued for buyer and funder demo wallets
 - [ ] ClearLedger A-Token issued on Monad and address recorded
 - [ ] Faucet balances available for demo wallets
-- [ ] Invoice contract deployed and address recorded
+- [x] Invoice contract deployed and address recorded
 - [ ] Contract registered with CCP and allowed/blocked checks captured
 - [ ] Live demo deployed with secrets stored server-side
 - [ ] Full allowed-path transaction completed

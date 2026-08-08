@@ -33,4 +33,13 @@
 - Expiration: August 9, 2027 at 23:59 UTC
 - Transaction: `0xd7a3c418da5b859e44d23d6ba836230eb2d2961f4b11c1417025c35efca37c49`
 
+## ClearLedger invoice contract
+
+- Chain: Monad testnet
+- Deployer: `0x1b829a971FA388367A7cb1105EA2F0168565c684`
+- Contract: `0xd086dAB59F3d183b77c14E6FbbacC421adCD1634`
+- Transaction: `0x0efb8a0d5503341bda8eba27566aefad24578fe876ad719695e566f7e9123e0e`
+- Receipt status: successful
+- Initial `nextInvoiceId`: `1`
+
 Additional CVI, CVA, contract, CCP, and lifecycle transactions will be appended as they complete.

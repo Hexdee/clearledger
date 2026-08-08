@@ -13,7 +13,7 @@ Please find ClearLedger's submission for the RWA track of Cleanverse Build: Trus
 - Demo video: [ADD LINK]
 - One-page summary: attached and/or [ADD LINK]
 - Deployed chain: Monad testnet
-- ClearLedger contract: [ADD ADDRESS AND EXPLORER LINK]
+- ClearLedger contract: 0xd086dAB59F3d183b77c14E6FbbacC421adCD1634
 - ClearLedger A-Token: [ADD ADDRESS AND EXPLORER LINK]
 
 ClearLedger turns buyer-confirmed invoices into programmable financing positions that verified liquidity can fund and settle on-chain. CVI verifies suppliers, buyers, and funders from issuance; CVA is the governed asset used for financing and repayment; and CCP exposes the pool-level eligibility decision before a transaction is submitted.
