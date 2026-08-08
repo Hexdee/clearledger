@@ -89,7 +89,7 @@ export function DemoConsole({ chain, tokenAddress, contractAddress }: { chain: s
 
           <article className="console-card lifecycle-card">
             <div className="card-kicker">Guided lifecycle preview</div>
-            <div className="card-title-row"><div><h3>INV-CL-001</h3><p>Buyer-confirmed services invoice</p></div><strong>10,000 <small>CLDG</small></strong></div>
+            <div className="card-title-row"><div><h3>INV-CL-001</h3><p>Buyer-confirmed services invoice</p></div><strong>10,000 <small>CLGR</small></strong></div>
             <div className="progress-track"><span style={{ width: `${((previewStep + 1) / previewSteps.length) * 100}%` }} /></div>
             <div className="audit-list">
               {previewSteps.map(([title, copy], index) => (
@@ -98,7 +98,7 @@ export function DemoConsole({ chain, tokenAddress, contractAddress }: { chain: s
                 </button>
               ))}
             </div>
-            <div className="invoice-facts"><span><small>Advance</small>8,000 CLDG</span><span><small>Repayment</small>8,300 CLDG</span><span><small>Term</small>30 days</span></div>
+            <div className="invoice-facts"><span><small>Advance</small>8,000 CLGR</span><span><small>Repayment</small>8,300 CLGR</span><span><small>Term</small>30 days</span></div>
           </article>
         </div>
       </div>

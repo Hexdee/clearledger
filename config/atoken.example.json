@@ -1,7 +1,7 @@
 {
   "chain": "monad",
   "token_name": "ClearLedger Settlement",
-  "token_symbol": "CLDG",
+  "token_symbol": "CLGR",
   "decimals": 6,
   "admin_address": "0x0000000000000000000000000000000000000000",
   "rule": {
