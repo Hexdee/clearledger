@@ -8,7 +8,7 @@ Dear Isaac and the Cleanverse judging team,
 
 Please find ClearLedger's submission for the RWA track of Cleanverse Build: Trusted Assets.
 
-- Public repository: [ADD LINK]
+- Public repository: https://github.com/Hexdee/clearledger
 - Live demo: [ADD LINK]
 - Demo video: [ADD LINK]
 - One-page summary: attached and/or [ADD LINK]

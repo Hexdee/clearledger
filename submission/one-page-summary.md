@@ -24,6 +24,8 @@ The prototype includes a tested Solidity lifecycle contract, server-only encrypt
 
 ## Deployed chain and scalability
 
-**Chain:** Monad testnet/sandbox. Final A-Token, contract, transaction, repository, video, and live-demo links will be added after deployment.
+**Chain:** Monad testnet/sandbox. Final A-Token, contract, transaction, video, and live-demo links will be added after deployment.
+
+**Repository:** https://github.com/Hexdee/clearledger
 
 The architecture generalizes from one invoice to portfolios, jurisdiction-specific policies, risk tiers, multiple funders, secondary transfers, and institutional fiat gateways without changing the identity and settlement trust layer.
