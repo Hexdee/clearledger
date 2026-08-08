@@ -1,0 +1,12 @@
+{
+  "chain": "monad",
+  "contract_address": "0x0000000000000000000000000000000000000000",
+  "rule": {
+    "allowed_group": "",
+    "allowed_sub_group": "invoice-finance",
+    "min_tier": 1,
+    "min_sub_tier": 1,
+    "is_black_list": false,
+    "countries": []
+  }
+}

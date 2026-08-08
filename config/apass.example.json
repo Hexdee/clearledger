@@ -1,0 +1,11 @@
+{
+  "customerId": "CLEARLEDGER001",
+  "expirationTime": 1798761599,
+  "wallet": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "chain": "monad"
+  },
+  "kycSource": "ClearLedger sandbox demo",
+  "subTier": 1,
+  "subGroup": "invoice-finance"
+}

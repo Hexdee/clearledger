@@ -1,0 +1,16 @@
+{
+  "chain": "monad",
+  "token_name": "ClearLedger Settlement",
+  "token_symbol": "clUSD",
+  "decimals": 6,
+  "admin_address": "0x0000000000000000000000000000000000000000",
+  "rule": {
+    "allowed_group": "",
+    "allowed_sub_group": "invoice-finance",
+    "min_tier": 1,
+    "min_sub_tier": 1,
+    "is_black_list": false,
+    "countries": []
+  },
+  "icon": "https://YOUR_PUBLIC_DEMO_URL/clearledger-icon.png"
+}

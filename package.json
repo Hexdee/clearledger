@@ -1,0 +1,37 @@
+{
+  "name": "clearledger",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "cleanverse": "tsx scripts/cleanverse.mts",
+    "contracts:build": "forge build",
+    "contracts:test": "forge test -vvv",
+    "contracts:deploy": "forge script script/DeployClearLedger.s.sol:DeployClearLedger --rpc-url $RPC_URL --broadcast"
+  },
+  "dependencies": {
+    "@next/env": "latest",
+    "ethers": "latest",
+    "next": "16.3.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "9.39.1",
+    "eslint-config-next": "16.3.0",
+    "tsx": "latest",
+    "typescript": "6.0.2",
+    "vitest": "latest"
+  },
+  "packageManager": "pnpm@11.9.0"
+}

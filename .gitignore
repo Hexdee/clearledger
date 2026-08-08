@@ -1,0 +1,15 @@
+.env
+.env*.local
+.deck-build/
+node_modules/
+.next/
+out/
+cache/
+broadcast/
+lib/forge-std/
+dist/
+coverage/
+*.tsbuildinfo
+config/*.local.json
+deliverables/*.inspect.ndjson
+.DS_Store
