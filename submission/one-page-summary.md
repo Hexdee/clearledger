@@ -1,25 +1,29 @@
-# ClearLedger — verified invoice finance
+# ClearLedger — compliance-native invoice finance
+
+**One-line pitch:** Buyer-confirmed invoices become programmable assets that verified liquidity can fund and settle on-chain.
 
 ## Problem
 
-Small suppliers routinely wait 30–90 days for payment while conventional invoice financing is slow, opaque, and expensive. Moving invoices on-chain does not solve the hardest part: financiers still need trustworthy counterparties, policy-compliant settlement, and a lifecycle they can audit.
+Small suppliers routinely wait 30–90 days for payment, even after delivering work to creditworthy buyers. Conventional invoice financing is slow and opaque, while a basic on-chain invoice token introduces new risks: anonymous counterparties, unrestricted transfers, and no reliable connection between the commercial obligation and settlement.
 
 ## Solution
 
-ClearLedger turns a buyer-confirmed invoice into a programmable real-world financing position. A supplier records the invoice terms and evidence commitment; the buyer confirms the obligation; an eligible liquidity provider advances funds; and the buyer repays through the same governed settlement layer. The Solidity contract records every lifecycle transition and prevents financing before buyer confirmation.
+ClearLedger creates a governed financing lifecycle around a buyer-confirmed invoice. A verified supplier commits the invoice terms and evidence hash; a verified buyer confirms the obligation; an eligible funder advances capital; and the buyer repays through the same policy-controlled settlement asset. The contract prevents financing before confirmation and records issuance, funding, repayment, and claim events for an audit-ready history.
 
-## Cleanverse integration
+## CVI · CVA integration points
 
-- **CVI / A-Pass:** supplier, buyer, and funder wallets receive wallet-bound identity credentials. The app queries active status, tier, group, subgroup, and country eligibility before financing.
-- **CVA / A-Token:** a Cleanverse-issued A-Token is the contract's settlement asset for both the advance and repayment. Its embedded rules make identity policy part of every value transfer rather than a separate onboarding checkbox.
-- **CCP Protocol:** the deployed invoice contract is registered as a compliant pool. The demo calls the validator before financing so an ineligible participant is visibly blocked before submitting an on-chain transaction.
+1. **Identity from issuance — CVI / A-Pass:** supplier, buyer, and funder receive wallet-bound credentials before participating. ClearLedger evaluates active status, expiration, tier, group, subgroup, and country eligibility. No personal identity data is written to the invoice contract.
+2. **Governed value — CVA / A-Token:** a Cleanverse-issued A-Token is selected when the invoice is created and is the only asset accepted for the advance and repayment. Its embedded transfer policy makes CVI eligibility part of every movement of value.
+3. **Pool policy — CCP Protocol:** the deployed invoice contract is registered as a compliant pool. Before financing, one preflight combines the A-Pass record, A-Token decision, and CCP validator result. Failed checks return human-readable reasons and block the transaction before money moves.
 
-CVI and CVA are both core to the flow: without a valid identity the participant cannot pass the policy, and without the verified settlement asset the invoice cannot be financed or repaid.
+CVI and CVA are therefore dependencies of the core flow, not optional onboarding features: identity determines who may participate, while the verified asset finances and settles the invoice.
 
-## Deployed chain
+## Build quality and demo
 
-Monad sandbox/testnet. Final contract, A-Token, transaction, live-demo, and repository links are added after deployment.
+The prototype includes a tested Solidity lifecycle contract, server-only encrypted Cleanverse integration, reproducible issuance/deployment commands, and a responsive web demo. The recording shows both paths: an eligible wallet financing and settling an invoice, and an ineligible wallet being rejected before execution. Secrets and personal data remain outside the browser and public contract state.
 
-## Evidence
+## Deployed chain and scalability
 
-The public repository contains build-window commit history, tested smart contracts, encrypted Cleanverse integration, an interactive compliance preflight, architecture notes, and reproducible operator commands.
+**Chain:** Monad testnet/sandbox. Final A-Token, contract, transaction, repository, video, and live-demo links will be added after deployment.
+
+The architecture generalizes from one invoice to portfolios, jurisdiction-specific policies, risk tiers, multiple funders, secondary transfers, and institutional fiat gateways without changing the identity and settlement trust layer.

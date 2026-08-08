@@ -12,4 +12,5 @@
 - [ ] Blocked-path decision demonstrated
 - [ ] Demo video uploaded and publicly viewable
 - [ ] One-page summary updated with final links and addresses
+- [ ] Optional updated project description included in submission email
 - [ ] Submission email sent to the organizer before Aug 9, 23:59 UTC
