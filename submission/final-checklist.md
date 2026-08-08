@@ -2,7 +2,8 @@
 
 - [ ] Public GitHub repository link
 - [ ] Commits dated Aug 8–9 UTC
-- [ ] A-Pass issued for supplier, buyer, and funder demo wallets
+- [x] A-Pass issued for supplier/admin demo wallet
+- [ ] A-Pass issued for buyer and funder demo wallets
 - [ ] ClearLedger A-Token issued on Monad and address recorded
 - [ ] Faucet balances available for demo wallets
 - [ ] Invoice contract deployed and address recorded
