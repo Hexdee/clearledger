@@ -14,8 +14,8 @@ const client = new CleanverseClient({ baseUrl, apiId, apiKey });
 const [command, ...args] = process.argv.slice(2);
 
 const ruleSchema = z.object({
-  allowed_group: z.string(),
-  allowed_sub_group: z.string(),
+  allowed_group: z.string().regex(/^$|^[A-Za-z]{1,2}$/),
+  allowed_sub_group: z.string().regex(/^$|^[A-Za-z]{1,2}$/),
   min_tier: z.number().int().nonnegative(),
   min_sub_tier: z.number().int().nonnegative(),
   is_black_list: z.boolean().optional(),
@@ -29,7 +29,7 @@ const apassSchema = z.object({
   kycSource: z.string().optional(),
   kycId: z.string().optional(),
   subTier: z.number().int().optional(),
-  subGroup: z.string().optional(),
+  subGroup: z.string().regex(/^[A-Za-z]{1,2}$/).optional(),
   override: z.boolean().optional(),
   identityDataList: z.array(z.object({
     idType: z.string(), fullName: z.string(), idNumber: z.string().optional(),
