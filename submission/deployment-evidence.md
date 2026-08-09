@@ -33,13 +33,16 @@
 - Expiration: August 9, 2027 at 23:59 UTC
 - Transaction: `0xd7a3c418da5b859e44d23d6ba836230eb2d2961f4b11c1417025c35efca37c49`
 
-## ClearLedger invoice contract
+## ClearLedger invoice contract — active deployment
 
 - Chain: Monad testnet
 - Deployer: `0x1b829a971FA388367A7cb1105EA2F0168565c684`
-- Contract: `0xd086dAB59F3d183b77c14E6FbbacC421adCD1634`
-- Transaction: `0x0efb8a0d5503341bda8eba27566aefad24578fe876ad719695e566f7e9123e0e`
+- Contract: `0xE3dD43D11380A81D5af0BBd7DB3BeDd4340E0B83`
+- Transaction: `0x0edb3c4c29a1a5f7bb66d2fe2bd2fa282c56a5537fe87083b4c20b4314f828d7`
 - Receipt status: successful
+- On-chain owner: `0x1b829a971FA388367A7cb1105EA2F0168565c684`
 - Initial `nextInvoiceId`: `1`
+
+The earlier deployment at `0xd086dAB59F3d183b77c14E6FbbacC421adCD1634` is superseded because it did not expose the `owner()` interface required by CCP registration.
 
 Additional CVI, CVA, contract, CCP, and lifecycle transactions will be appended as they complete.
