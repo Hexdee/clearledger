@@ -54,7 +54,12 @@ async function payloadFromFile<T>(file: string | undefined, schema: z.ZodType<T>
 async function main() {
   switch (command) {
     case "list-atokens": {
-      const result = await client.listMyATokens();
+      const page = Number(args[0] ?? 1);
+      const pageSize = Number(args[1] ?? 20);
+      if (!Number.isInteger(page) || page < 1 || !Number.isInteger(pageSize) || pageSize < 1 || pageSize > 100) {
+        throw new Error("Usage: pnpm cleanverse list-atokens [page] [page-size, max 100]");
+      }
+      const result = await client.listMyATokens(page, pageSize);
       console.log(JSON.stringify(result, null, 2));
       break;
     }
