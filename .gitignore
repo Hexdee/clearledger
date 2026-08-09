@@ -12,4 +12,7 @@ coverage/
 *.tsbuildinfo
 config/*.local.json
 deliverables/*.inspect.ndjson
+deliverables/clearledger-demo*.aiff
+deliverables/clearledger-demo*.mp4
+deliverables/demo-captures/
 .DS_Store

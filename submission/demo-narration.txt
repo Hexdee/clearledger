@@ -1,0 +1,11 @@
+ClearLedger is compliance-native invoice finance, built for the Cleanverse Trusted Assets hackathon on Monad.
+
+Small suppliers often wait months for payment, even after a buyer has confirmed the work. ClearLedger turns that confirmed invoice into a programmable financing position without giving up institutional controls.
+
+Cleanverse Verified Identity gates the supplier, buyer, and funder from issuance. The A-Pass remains wallet-bound, while personal identity data stays outside public contract state.
+
+Here, the live production demo checks the supplier wallet against the Cleanverse sandbox. The wallet holds an active tier-fifty A-Pass, and the registered CCP financing-pool policy approves it before value can move.
+
+The invoice lifecycle is explicit. First, the verified supplier records the invoice terms and evidence commitment. Second, the verified buyer confirms the commercial obligation. Third, CVI and CCP clear the eligible funder before financing. Finally, the buyer repays through the governed settlement flow, creating an audit-ready history.
+
+The Solidity contract is deployed on Monad, the pool is registered with CCP, and both approved and rejected eligibility decisions have been verified. ClearLedger makes compliance part of the transaction itself.
