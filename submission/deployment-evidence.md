@@ -1,5 +1,15 @@
 # Deployment evidence
 
+## Live web deployment
+
+- Production URL: https://clearledger-roan.vercel.app
+- Platform: Vercel
+- Source commit: `a3b3f6a9768c947dcc833d7910e62785272c35c6`
+- Deployment status: ready
+- Cleanverse health check: successful (`407` sandbox applications visible at verification time)
+- Production preflight: supplier/admin approved with A-Pass tier `50`; CCP pool policy passed
+- Cleanverse credentials: encrypted Vercel environment variables, never exposed to browser code
+
 ## CVI — supplier/admin A-Pass
 
 - Chain: Monad
@@ -56,4 +66,4 @@ The earlier deployment at `0xd086dAB59F3d183b77c14E6FbbacC421adCD1634` is supers
 - Uncredentialed burn-address decision: blocked
 - Policy: subgroup `IF`, minimum tier `1`, minimum subtier `1`
 
-Additional CVI, CVA, contract, CCP, and lifecycle transactions will be appended as they complete.
+Additional CVA and lifecycle transactions will be appended when the pending A-Token issuance completes.

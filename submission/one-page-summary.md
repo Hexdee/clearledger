@@ -24,12 +24,16 @@ The prototype includes a tested Solidity lifecycle contract, server-only encrypt
 
 ## Deployed chain and scalability
 
-**Chain:** Monad testnet/sandbox. Final A-Token, contract, transaction, video, and live-demo links will be added after deployment.
+**Chain:** Monad testnet/sandbox.
+
+**Live demo:** https://clearledger-roan.vercel.app
 
 **Repository:** https://github.com/Hexdee/clearledger
 
 **Invoice contract:** `0xE3dD43D11380A81D5af0BBd7DB3BeDd4340E0B83`
 
 **CCP registration transaction:** `0x1e371c892be4325339b162c903c2e0fb1811846010e783128ae85a01b7b0042b`
+
+The production demo executes a real Cleanverse sandbox preflight. At verification time, the supplier wallet passed its active tier-50 A-Pass check and the registered CCP pool policy. CVA issuance is pending a Cleanverse sandbox factory transaction that exhausted its fixed gas allowance; the application and failed transaction evidence are retained for review.
 
 The architecture generalizes from one invoice to portfolios, jurisdiction-specific policies, risk tiers, multiple funders, secondary transfers, and institutional fiat gateways without changing the identity and settlement trust layer.

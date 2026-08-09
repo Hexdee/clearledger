@@ -2,6 +2,8 @@
 
 ClearLedger is a compliance-native invoice-finance prototype for the **Cleanverse Build: Trusted Assets Hackathon** RWA track.
 
+**Live demo:** https://clearledger-roan.vercel.app
+
 It turns a verified business invoice into a programmable financing asset. Cleanverse Verified Identity (CVI) gates suppliers, buyers, and liquidity providers; Cleanverse Verified Assets (CVA) provides the settlement asset; and transaction rules enforce eligibility and transfer restrictions before value moves.
 
 ## What is implemented

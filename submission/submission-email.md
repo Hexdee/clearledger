@@ -9,7 +9,7 @@ Dear Isaac and the Cleanverse judging team,
 Please find ClearLedger's submission for the RWA track of Cleanverse Build: Trusted Assets.
 
 - Public repository: https://github.com/Hexdee/clearledger
-- Live demo: [ADD LINK]
+- Live demo: https://clearledger-roan.vercel.app
 - Demo video: [ADD LINK]
 - One-page summary: attached and/or [ADD LINK]
 - Deployed chain: Monad testnet
