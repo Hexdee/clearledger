@@ -7,6 +7,8 @@ interface IERC20 {
 }
 
 contract ClearLedgerInvoice {
+    address private immutable OWNER;
+
     enum Status {
         None,
         Created,
@@ -51,6 +53,15 @@ contract ClearLedgerInvoice {
     error ReentrantCall();
 
     uint256 private unlocked = 1;
+
+    constructor() {
+        OWNER = msg.sender;
+    }
+
+    function owner() external view returns (address) {
+        return OWNER;
+    }
+
     modifier nonReentrant() {
         _nonReentrantBefore();
         _;

@@ -49,6 +49,10 @@ contract ClearLedgerInvoiceTest is Test {
         assertEq(uint256(status), uint256(ClearLedgerInvoice.Status.Claimed));
     }
 
+    function testOwnerIsRecordedForComplianceRegistration() public view {
+        assertEq(ledger.owner(), address(this));
+    }
+
     function testOnlyBuyerCanConfirm() public {
         vm.prank(supplier);
         uint256 id = ledger.createInvoice(buyer, address(token), 10_000e6, 8_000e6, 8_300e6, uint64(block.timestamp + 30 days), bytes32(0), bytes32(0));

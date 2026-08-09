@@ -84,7 +84,8 @@ async function main() {
     }
     case "register-pool": {
       const payload = await payloadFromFile(args[0], poolSchema);
-      payload.contract_address = getAddress(payload.contract_address);
+      getAddress(payload.contract_address);
+      payload.contract_address = payload.contract_address.toLowerCase();
       if (!payload.owner_signature) {
         const privateKey = process.env.DEPLOYER_PRIVATE_KEY;
         if (!privateKey) throw new Error("DEPLOYER_PRIVATE_KEY is required to create the CCP owner signature.");
