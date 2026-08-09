@@ -5,9 +5,10 @@ import Foundation
 
 let root = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
 let captures = root.appendingPathComponent("deliverables/demo-captures")
-let silentURL = root.appendingPathComponent("deliverables/clearledger-demo-silent.mp4")
+let silentURL = root.appendingPathComponent("deliverables/clearledger-demo-silent.mov")
 let audioURL = root.appendingPathComponent("deliverables/clearledger-demo.aiff")
 let outputURL = root.appendingPathComponent("deliverables/clearledger-demo.mp4")
+let exportURL = root.appendingPathComponent("deliverables/clearledger-demo-export.mp4")
 
 let frames: [(String, Double)] = [
     ("01-hero.png", 6),
@@ -22,19 +23,19 @@ let frames: [(String, Double)] = [
 
 let width = 1280
 let height = 720
-let fps: Int32 = 30
+let fps: Int32 = 15
 let fileManager = FileManager.default
 try? fileManager.removeItem(at: silentURL)
 try? fileManager.removeItem(at: outputURL)
+try? fileManager.removeItem(at: exportURL)
 
-let writer = try AVAssetWriter(outputURL: silentURL, fileType: .mp4)
+let writer = try AVAssetWriter(outputURL: silentURL, fileType: .mov)
 let settings: [String: Any] = [
-    AVVideoCodecKey: AVVideoCodecType.h264,
+    AVVideoCodecKey: AVVideoCodecType.jpeg,
     AVVideoWidthKey: width,
     AVVideoHeightKey: height,
     AVVideoCompressionPropertiesKey: [
-        AVVideoAverageBitRateKey: 4_500_000,
-        AVVideoProfileLevelKey: AVVideoProfileLevelH264HighAutoLevel,
+        AVVideoQualityKey: 0.82,
     ],
 ]
 let input = AVAssetWriterInput(mediaType: .video, outputSettings: settings)
@@ -114,11 +115,12 @@ if let audioSource = audioAsset.tracks(withMediaType: .audio).first,
 guard let exporter = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetHighestQuality) else {
     fatalError("Unable to create exporter")
 }
-exporter.outputURL = outputURL
+exporter.outputURL = exportURL
 exporter.outputFileType = .mp4
 exporter.shouldOptimizeForNetworkUse = true
 let exportSemaphore = DispatchSemaphore(value: 0)
 exporter.exportAsynchronously { exportSemaphore.signal() }
 exportSemaphore.wait()
 guard exporter.status == .completed else { fatalError(exporter.error?.localizedDescription ?? "Export failed") }
+try fileManager.moveItem(at: exportURL, to: outputURL)
 print(outputURL.path)

@@ -28,6 +28,8 @@ The prototype includes a tested Solidity lifecycle contract, server-only encrypt
 
 **Live demo:** https://clearledger-roan.vercel.app
 
+**Demo video:** https://github.com/Hexdee/clearledger/releases/download/demo-v1/clearledger-demo.mp4
+
 **Repository:** https://github.com/Hexdee/clearledger
 
 **Invoice contract:** `0xE3dD43D11380A81D5af0BBd7DB3BeDd4340E0B83`

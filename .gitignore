@@ -14,5 +14,7 @@ config/*.local.json
 deliverables/*.inspect.ndjson
 deliverables/clearledger-demo*.aiff
 deliverables/clearledger-demo*.mp4
+deliverables/clearledger-demo*.mov
+deliverables/clearledger-demo*.m4v
 deliverables/demo-captures/
 .DS_Store

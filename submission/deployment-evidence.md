@@ -10,6 +10,14 @@
 - Production preflight: supplier/admin approved with A-Pass tier `50`; CCP pool policy passed
 - Cleanverse credentials: encrypted Vercel environment variables, never exposed to browser code
 
+## Demo video
+
+- Public release page: https://github.com/Hexdee/clearledger/releases/tag/demo-v1
+- Direct video: https://github.com/Hexdee/clearledger/releases/download/demo-v1/clearledger-demo.mp4
+- Duration: 57 seconds
+- Resolution: 1280×720
+- Contents: product overview, live CVI/CCP preflight approval, and the four-stage invoice lifecycle
+
 ## CVI — supplier/admin A-Pass
 
 - Chain: Monad

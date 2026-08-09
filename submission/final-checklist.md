@@ -12,7 +12,7 @@
 - [x] Live demo deployed with secrets stored server-side
 - [ ] Full allowed-path transaction completed
 - [ ] Blocked-path decision demonstrated
-- [ ] Demo video uploaded and publicly viewable
+- [x] Demo video uploaded and publicly viewable
 - [ ] One-page summary updated with final links and addresses
-- [ ] Optional updated project description included in submission email
+- [x] Optional updated project description included in submission email
 - [ ] Submission email sent to the organizer before Aug 9, 23:59 UTC
