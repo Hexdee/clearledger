@@ -7,7 +7,8 @@
 - [ ] ClearLedger A-Token issued on Monad and address recorded
 - [ ] Faucet balances available for demo wallets
 - [x] Invoice contract deployed and address recorded
-- [ ] Contract registered with CCP and allowed/blocked checks captured
+- [x] Contract registered with CCP and allowed checks captured
+- [x] Blocked CCP decision captured with an ineligible wallet
 - [ ] Live demo deployed with secrets stored server-side
 - [ ] Full allowed-path transaction completed
 - [ ] Blocked-path decision demonstrated

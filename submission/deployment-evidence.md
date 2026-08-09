@@ -45,4 +45,15 @@
 
 The earlier deployment at `0xd086dAB59F3d183b77c14E6FbbacC421adCD1634` is superseded because it did not expose the `owner()` interface required by CCP registration.
 
+## CCP — compliance pool registration
+
+- Registered contract: `0xE3dD43D11380A81D5af0BBd7DB3BeDd4340E0B83`
+- Registration transaction: `0x1e371c892be4325339b162c903c2e0fb1811846010e783128ae85a01b7b0042b`
+- Receipt status: successful
+- Supplier/admin decision: allowed
+- Buyer decision: allowed
+- Funder decision: allowed
+- Uncredentialed burn-address decision: blocked
+- Policy: subgroup `IF`, minimum tier `1`, minimum subtier `1`
+
 Additional CVI, CVA, contract, CCP, and lifecycle transactions will be appended as they complete.

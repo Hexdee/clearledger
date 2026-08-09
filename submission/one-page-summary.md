@@ -30,4 +30,6 @@ The prototype includes a tested Solidity lifecycle contract, server-only encrypt
 
 **Invoice contract:** `0xE3dD43D11380A81D5af0BBd7DB3BeDd4340E0B83`
 
+**CCP registration transaction:** `0x1e371c892be4325339b162c903c2e0fb1811846010e783128ae85a01b7b0042b`
+
 The architecture generalizes from one invoice to portfolios, jurisdiction-specific policies, risk tiers, multiple funders, secondary transfers, and institutional fiat gateways without changing the identity and settlement trust layer.
